@@ -2,6 +2,7 @@
 pragma solidity 0.8.19;
 
 // This code is not written by me, it is taken from the Chatgpt which took from the solidity docs
+// But it is understandable
 contract Owner {
     address public owner;
 
@@ -40,5 +41,9 @@ contract Register is Owner {
 
     function changePrice(uint _newPrice) public onlyOwner {
         price = _newPrice;
+    }
+
+    function getPrice() public view returns (uint) {
+        return price;
     }
 }
